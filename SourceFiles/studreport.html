@@ -1,0 +1,296 @@
+<style type="text/css">
+#tab{
+		position:absolute;
+		left:250px;
+		top:300px;
+		border-width:5px;
+		background-color:ivory;
+		col-width:70px;
+		font-size:18px;
+		
+		
+	}
+	p {font-size:25px;}
+.h{
+		background-color:rgb(198, 217, 236);
+		color:red;
+		font-size:20px;
+}
+th, td {
+  padding: 10px;
+  text-align: centre;
+}
+table{
+		width:600px;text-align: centre;
+}
+/* Style the header */
+.header {
+  background-color:powderblue;
+  padding: 20px;
+  text-align:left;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+li .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li  .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#c{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#cc{
+	position:absolute;
+	top:0px;
+	left:150px;
+}
+.b{
+	width:30px;
+	background-color:#333;
+	width:150px;
+	height:50px;
+	color:white;
+	display: inline-block;
+	border:0px;
+}
+#lb{
+	position:absolute;
+	top:0px;
+	left:150px;
+}
+#lbb{
+	position:absolute;
+	top:0px;
+	left:550px;
+}
+#lbbb{
+	position:absolute;
+	top:0px;
+	left:430px;
+}
+#dd{
+	background-color:#333;
+	width:1520px;
+	height:50px;
+	position:absolute;
+	top:130px;
+	}
+
+#bb{
+	position:absolute;
+		top:200px;font-size:25px;
+}
+#rr{
+	position :absolute;
+	top:350px;font-size:20px;
+left:0px;}
+#re{
+	
+	background-color:ivory;
+	width:250px;height:40px;
+	border-radius:5px;
+}
+#ree{
+	
+	background-color:ivory;
+	width:270px;height:100px;
+	border-radius:5px;
+}
+#rm{
+	width:250px;
+	background-color:ivory;height:40px;
+	border-radius:5px;
+	position:absolute;
+	top=-3px;
+}
+#aa{
+		position:absolute;
+		top:opx;
+		left:130px;
+}
+#bbb{
+	position:absolute;
+		top:0px;left:550px;
+}
+#bbbb{
+	position:absolute;
+		top:0px;left:1050px;
+}
+#rem{
+	position:absolute;
+	top:325px;
+	left:300px;
+	border-radius:5px;
+	width:120px;font-size:15px;
+	color:white;
+	background-color:rgb(99,99,126);
+	height:40px;
+	}
+#bbbbb{
+	position:absolute;
+		top:150px;left:125px;
+}
+#bbbbbb{
+	position:absolute;
+		top:150px;left:600px;
+}
+#c{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#cc{
+	position:absolute;
+	top:0px;
+	left:150px;
+}
+.b{
+	width:30px;
+	background-color:#333;
+	width:150px;
+	height:50px;
+	color:white;
+	display: inline-block;
+	border:0px;
+}
+#l{
+	position:absolute;
+	top:0px;
+	left:300px;
+}
+#dd{
+	background-color:#333;
+	width:1520px;
+	height:50px;
+	position:absolute;
+	top:130px;
+	}
+#aa{
+	position:absolute;
+		top:170px;
+}
+#bb{
+	position:absolute;
+		top:240px;font-size:25px;
+}
+#ll{
+	position:absolute;
+		top:0px;
+		left:450px;
+}
+#lll{
+	position:absolute;
+		top:0px;
+		left:600px;	
+}
+
+</style>
+
+<?php
+	session_start();
+?>
+	<html><body background="bgg.jpg">
+	<div class="header">
+	<img style="position:relative;top:-15px;left:-10px;width:5%;height:10%;"src="logo.jpg"></img>
+	<b style="font-size:30px;position:relative;top:-40px;left:50px;">BMSCE</b>
+	</div>
+	<div id="dd" >
+	<form method="post"action="studhomepage.php">
+	<input class="b"id="c"type="submit" value="Home"/></form>
+	<form action="studreport.html">
+	<input type="submit"class="b"id="l" onclick="all();" value="Course entry" ></form>
+	<form action="studlogout.php">
+	<input type="submit"class="b"id="lbbb" onclick="all();" value="Logout" ></form>
+	
+		<form action="viewdetailreport.php">
+	<input type="submit"class="b"id="lb" onclick="all();" value="View Report" ></form>
+	</div><br/><br/>
+	<form name="st" method="post" id="rr" action="studreport.php">
+	<label style="position:relative;left:40px;top:-30px;"><b>USN:</b><input type="text" style="height:25px;width:240px;background-color:ivory;border-radius:5px;" name="usn101" placeholder="enter usn"></label>
+	<table style="position:relative;left:50px;top:-20px;"border="1px"><tr><th style="font-size:20px">sl no.</th><th style="font-size:20px">course code</th><th style="font-size:20px">course name</th><th style="font-size:20px">credits</th></tr>
+	<tr><th>1.</th><th><label ><input style="border-radius:5px;background-color:ivory;" type="text"  name="sc1" placeholder="code"required></label></th>
+	<th><label ><input type="text" style="border-radius:5px;background-color:ivory;"  name="sn1" placeholder="course name"required></label></th>
+	<th><label ><input type="text" style="border-radius:5px;background-color:ivory;"  name="c1" placeholder="credit"required></label></th></tr>
+	
+	<tr><th>2.</th><th><label ><input style="border-radius:5px;background-color:ivory;" type="text"  name="sc2" placeholder="code"></label></th>
+	<th><label ><input type="text"  style="border-radius:5px;background-color:ivory;" name="sn2" placeholder="course name"></label></th>
+	<th><label ><input type="text" style="border-radius:5px;background-color:ivory;"  name="c2" placeholder="credit"></label></th></tr>
+	
+	<tr><th>3.</th><th><label id="ccc"><input style="border-radius:5px;background-color:ivory;"  type="text"  name="sc3" placeholder="code"></label></th>
+	<th><label ><input type="text" style="border-radius:5px;background-color:ivory;"  name="sn3" placeholder="course name"></label></th>
+	<th><label ><input type="text" style="border-radius:5px;background-color:ivory;"  name="c3" placeholder="credit"></label></th></tr>
+	
+	<tr><th>4.</th><th><label id="cccc"><input style="border-radius:5px;background-color:ivory;" type="text"  name="sc4" placeholder="code"></label></th>
+	<th><label ><input type="text"  style="border-radius:5px;background-color:ivory;" name="sn4" placeholder="course name"></label></th>
+	<th><label ><input type="text" style="border-radius:5px;background-color:ivory;"  name="c2" placeholder="credit"></label></th></tr>
+	
+	<tr><th>5.</th><th><label id="ccccc"><input style="border-radius:5px;background-color:ivory;" type="text"  name="sc5" placeholder="code"></label></th>
+	<th><label ><input type="text" style="border-radius:5px;background-color:ivory;"  name="sn5" placeholder="course name"></label></th>
+	<th><label ><input type="text"  style="border-radius:5px;background-color:ivory;" name="c5" placeholder="credit"></label></th></tr>
+	
+	</table>
+	
+	<input  type="submit"value="Save"id="rem"></form>
+	<p id="bb"><b>Course Entry Form:</b></p>
+
+	<br/><br /><br/>
+	</body>
+	</html>

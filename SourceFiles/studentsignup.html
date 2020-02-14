@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+<title>studentinfo</title>
+<style>
+body{
+	background-color:grey;
+	}
+div.one {
+	width:950px;
+    display:block;
+	background-color:white;
+} 
+#sub{
+		background-color:rgb(99,99,156);
+		width:200px;
+		height:40px;
+		border-radius:30px;
+		color:white;
+		font-size:20px;
+		position:absolute;
+		top:1570px;
+		left:650px;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var nam=data.name1.value;var namecheck=nam.search(/\D+/i);
+	if(namecheck==-1)
+	{
+		alert("invalid name");
+		return false;
+	}
+	var na=data.pr.value;var nacheck=na.search(/\D+/i);
+	if(nacheck==-1)
+	{
+		alert("invalid name");
+		return false;
+	}
+	var usn=data.usn.value;var usncheck=usn.search(/1BM1[0-8][a-z]{2}[0-9]{3}/i);
+	if(usncheck==-1)
+	{
+		alert("invalid usn");
+		return false;
+	}
+	var dob=data.dob.value;var dobcheck=dob.search(/[^A-Z]/i);
+	if(dobcheck==-1)
+	{
+		alert("invalid dob");
+		return false;
+	}
+	var cn=data.cn.value;var cncheck=cn.search(/[0-9]+/);
+	if(cncheck==-1)
+	{
+		alert("invalid contact info");
+		return false;
+	}
+	var mail=data.email.value;var mailcheck= mail.search(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+	if(mailcheck==-1)
+	{
+		alert("invalid email");
+		return false;
+	}
+	var th=data.th.value;var thcheck=th.search(/\d{4}/);
+	if(thcheck==-1)
+	{
+		alert("invalid year of qualifying");
+		return false;
+	}
+	var pu=data.pu.value;var pucheck=pu.search(/\d{4}/);
+	if(pucheck==-1)
+	{
+		alert("invalid year of qualifying");
+		return false;
+	}
+	var acc=data.accomodation.value;if(acc.length==-1){alert("select valid accomodation");return false;}
+}
+</script>
+
+</head>
+<body>
+<center><fieldset>
+<h1 style="background-color:powderblue;padding: 20px">Student Information</h1>
+<div class="one">
+<form  name="data" method="post" onsubmit= "return validate()"action="studentsignup.php">
+<div> 
+<br /><br /><b>1.FullName:<span style="color:red;">*</span></b>
+<input type="text" name="name1" placeholder="enter name"required>
+</div><br /><br />
+<div>
+<b>2.USN:<span style="color:red;">*</span></b>
+ <input class="text"type="text" name="usn" placeholder="enter usn"required/>
+</div><br/><br />
+<div>
+<b>3.DateOfBirth:<span style="color:red;">*</span></b>
+ <input class="text"type="text" name="dob" placeholder="enter dob"required/>
+</div><br/><br />
+<div>
+<b>4.ContactNumber:<span style="color:red;">*</span></b>
+ <input class="text"type="text" name="cn" placeholder="enter contact no" required/>
+</div><br/><br />
+<div>
+<b>5.E-mail:<span style="color:red;">*</span></b>
+ <input class="text"type="email" name="email" placeholder="enter email"required/>
+</div><br/><br />
+<div>
+<b>6.Proctor:<span style="color:red;">*</span></b>
+ <input class="text"type="text" name="pr" placeholder="enter proctor name"required/>
+</div><br/><br />
+<div>
+<b>7.Proctor Id:<span style="color:red;">*</span></b>
+ <input class="text"type="text" name="prid" placeholder="enter proctor id"required/>
+</div><br/><br />
+<div>
+<fieldset >
+<legend><b>8.Parent's Details<span style="color:red;">*</span></b></legend>
+<b>Father's Name:</b>
+ <input class="text"type="text" name="fname" placeholder="enter name"/><br><br/>
+<b>Contact Number</b>
+ <input class="text"type="text" name="cname" placeholder="enter contact number"/><br><br />
+<b> Mother's Name:</b>
+ <input class="text"type="text" name="mname" placeholder="enter name"/><br><br />
+<b> Contact Number</b>
+ <input class="text"type="text" name="cfname" placeholder="enter contact number"/><br><br />
+ <b>Guardian's Name:</b>
+ <input class="text"type="text" name="gname" placeholder="enter name"/><br><br />
+ <b>Contact Number:</b>
+ <input class="text"type="text" name="ggname" placeholder="enter contact number"/><br><br />
+ <div> 
+<b>Accomodation:<span style="color:red;">*</span></b>
+<input type="radio" name="acomodation" value="Day Scholar">Day Scholar
+<input type="radio" name="acomodation" value="Hostel">Hostel
+<input type="radio" name="acomodation" value="Paying Guest">Paying Guest
+</div><br /><br />
+<div>
+ <b>Address:<span style="color:red;">*</span></b>
+ <textarea name="a" rows="2" cols="25" placeholder="enter address" required /></textarea><br/><br />
+</fieldset>
+</div><br /><br />
+
+<div class="one">
+
+<fieldset style="border:none;"><fieldset>
+<legend><b>9.Previous Record:<b></legend>
+<div>
+<fieldset style="border:none;">
+<legend><b>Details of qualifying examination<b></legend>
+Class 10:<span style="color:red;">*</span>
+ <input class="text" type="text" name="th" placeholder="enter year of qualifying" required/><br><br />
+class 12:<span style="color:red;">*</span>
+ <input class="text"type="text" name="pu" placeholder="enter year of qualifying" required/><br><br />
+</fieldset>
+</div>
+<div>
+<fieldset style="border:none;">
+<legend><b>Scholarships/Awards<i>(if any)</i><b></legend>
+Class 10:
+ <input class="text" type="text" name="th1" placeholder="enter year of qualifying"/><br><br />
+class 12:
+ <input class="text"type="text" name="pu1" placeholder="enter year of qualifying"/><br><br />
+</fieldset>
+</div>
+<div>
+<fieldset style="border:none;">
+<legend><b>Extra Curricular Achievements<i>(if any)</i><b></legend>
+<textarea name="message" rows="10" cols="30"placeholder="enter your achievements"></textarea><br /><br />
+<b>Any other information:</b>
+<div>
+<textarea name="message1" rows="5" cols="30"placeholder="enter other info"></textarea>
+
+</fieldset></fieldset>
+</div>
+<br /><br/>
+<br /><br />
+<input type="submit" id="sub"value="submit">
+</fieldset></form>
+</div>
+</fieldset>
+</div>
+</center> 
+ </div>
+ </body>
+</html>
